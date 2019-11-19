@@ -1,1 +1,4 @@
-A new starting.
+# Action Net
+Pytorch implementation of "A 3D Geometric Manifold Representation Method: Towards Good Practices forSkeleton Action Recognition".
+## Introduction
+Action Net provides A 3D geometric manifold representation method, termed motion triangular planes of 3D joint (MTJ3D) is extracted from the raw skeleton data to capture the view invariant short-term motion cues. For long-term dependence, we construct 2D and 3D CNNs based backbone to aggregate the scattered frame-level features in space and time respectively. For purpose of updating the statistical weight of each motion triangular planes from a MTJ3D vector, the ablative experiments was carried out about exploring the structure of the Conv1. We also propose a multi-feature CNNs architecture to learn classification from complementary geometric feature manifolds.
