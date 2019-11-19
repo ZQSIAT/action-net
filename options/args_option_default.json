@@ -1,0 +1,83 @@
+{
+    "dataset": {
+        "data_name": "UWA3D",
+        "modality": "Skeleton",
+        "spatial_transform": "spatial_group_crop_org",
+        "is_skeleton_transform_velocity": false,
+        "eval_protocol": "2_cross_view1",
+        "temporal_transform": "dynamic_snapshot_sampling",
+        "regenerate_protocol_files": false,
+        "batch_size": 64,
+        "train_shuffle": true
+    },
+
+    "cuda":{
+        "disable": false,
+        "gpu_card": "0, 1",
+        "pin_memory": true
+    },
+
+    "random_seed": 2,
+
+    "model_Fusion": {
+        "net_arch": "Fusion",
+        "optimizer": "SGD_1e-3",
+        "adjust_lr": "decay_every_epoch_2010",
+        "criterion": "cross_entropy_loss",
+        "metrics": ["accuracy_percent"]
+    },
+    "model_mlp": {
+        "net_arch": "Fusion_mlp",
+        "optimizer": "SGD_1e-2",
+        "adjust_lr": "decay_every_epoch_2010",
+        "criterion": "cross_entropy_loss",
+        "metrics": ["accuracy_percent"]
+    },
+    "model": {
+        "net_arch": "Resnet_3D_18_455X1",
+        "optimizer": "SGD_1e-2",
+        "adjust_lr": "decay_every_epoch_2010",
+        "criterion": "cross_entropy_loss",
+        "metrics": ["accuracy_percent"]
+    },
+    "model_respective": {
+        "net_arch": "Resnet3D_respective",
+        "optimizer": "SGD_1e-2",
+        "adjust_lr": "decay_every_epoch_2010",
+        "criterion": "cross_entropy_loss",
+        "metrics": ["accuracy_percent"]
+    },
+    "model_linear": {
+        "net_arch": "Resnet3D_linear",
+        "optimizer": "SGD_1e-2",
+        "adjust_lr": "decay_every_epoch_2010",
+        "criterion": "cross_entropy_loss",
+        "metrics": ["accuracy_percent"]
+    },
+
+
+    "model_old2": {
+        "net_arch": "SF_resnet34",
+        "optimizer": "SGD_1e-2",
+        "adjust_lr": "decay_every_epoch_2010",
+        "criterion": "cross_entropy_loss",
+        "metrics": ["accuracy_percent"]
+    },
+    "model_old": {
+        "net_arch": "Resnet_3D_18",
+        "optimizer": "SGD_1e-3",
+        "adjust_lr": "decay_every_epoch_2010",
+        "criterion": "cross_entropy_loss",
+        "metrics": ["accuracy_percent"]
+    },
+    "train": {
+        "epochs": 101,
+        "log_interval": 20,
+        "checkpoint_interval": 20,
+        "mail_notification": true,
+        "default_code": "DEBUG",
+        "plot_net_arch": false,
+        "plot_confusion_matrix": false,
+        "tensorboard": true
+    }
+}

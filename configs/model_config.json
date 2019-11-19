@@ -1,0 +1,116 @@
+{
+    "net_arch": {
+        "plain_net_4": "Plain_Net.plain_net_4",
+        "I3D_net": "I3D_net.I3D",
+        "TSN_net": "tsn_net.TSN",
+        "Resnet34_2D": "resnet_2D.resnet34_2D",
+        "Resnet50_2D": "resnet_2D.resnet34_2D",
+        "Resnet101_2D": "resnet_2D.resnet101_2D",
+        "Resnet18_2D": "resnet_2D.resnet18_2D",
+        "Resnet18_2D_20x1": "resnet_2D_20x1.resnet18_2D",
+        "Resnet_3D_10": "resnet_3D.resnet10",
+        "Resnet_3D_18": "resnet_3D.resnet18",
+        "Resnet_3D_18_455X1": "resnet3D_455X1.resnet18",
+        "Resnet3D_original": "resnet3D_original.resnet18",
+        "Resnet3D_respective": "resnet3D_respective.resnet18",
+        "Resnet3D_linear": "resnet3D_linear.resnet18",
+        "Fusion": "fusion.resnet18",
+        "Fusion_mlp": "fusion_mlp.resnet18",
+        "Resnet_3D_34": "resnet_3D.resnet34",
+        "Resnet_3D_50": "resnet_3D.resnet50",
+        "Resnet_3D_101": "resnet_3D.resnet101",
+        "SF_resnet34": "slowfastnet.resnet34"
+    },
+
+    "optimizer": {
+        "SGD_1e-1": {
+            "lr": 0.1,
+            "momentum": 0.9,
+            "weight_decay": 1e-5
+        },
+        "SGD_1e-2": {
+            "lr": 0.01,
+            "momentum": 0.9,
+            "weight_decay": 5e-4
+        },
+        "SGD_5e-2": {
+            "lr": 0.05,
+            "momentum": 0.9,
+            "weight_decay": 1e-5
+        },
+        "SGD_1e-3": {
+            "lr": 0.001,
+            "momentum": 0.9,
+            "weight_decay": 1e-5
+        },
+        "SGD_1e-4": {
+            "lr": 0.0001,
+            "momentum": 0.9,
+            "weight_decay": 1e-5
+        },
+        "SGD_1e-5": {
+            "lr": 0.00001,
+            "momentum": 0.9,
+            "weight_decay": 1e-5
+        },
+        "Adam_1e-1": {
+            "lr": 0.1,
+            "weight_decay": 0
+        },
+        "Adam_1e-2": {
+            "lr": 0.01,
+            "weight_decay": 0
+        }
+    },
+
+    "adjust_lr": {
+        "decay_every_epoch_1010": {
+            "lr_steps": 10,
+            "lr_decay": 0.1
+        },
+        "decay_every_epoch_0510": {
+            "lr_steps": 5,
+            "lr_decay": 0.1
+        },
+        "decay_every_epoch_2010": {
+            "lr_steps": 20,
+            "lr_decay": 0.1
+        },
+        "decay_every_epoch_3010": {
+            "lr_steps": 30,
+            "lr_decay": 0.1
+        },
+        "decay_every_epoch_5010": {
+            "lr_steps": 50,
+            "lr_decay": 0.1
+        },
+        "decay_custom_epoch": {
+            "lr_steps": [5, 30, 60, 90],
+            "lr_decay": 0.1
+        },
+        "disable": null
+    },
+
+    "criterion": {
+        "nll_loss": null,
+        "cross_entropy_loss": "torch.nn.CrossEntropyLoss"
+    },
+
+    "metrics": {
+        "accuracy_percent": {
+            "display": "Accuracy",
+            "definition": "calculate_accuracy_percent",
+            "units": "%"
+        },
+        "precision_recall_percent": {
+            "display": "Precision",
+            "definition": "calculate_precision_recall_percent_for_all",
+            "units": "%"
+        }
+    },
+
+    "check_point": {
+        "save_path": "$output/$data_name/",
+        "save_freq": "best"
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "data_root": "/data/zqs/skeleton_datasets_36/datasets",
+    "deploy_root": "/data/zqs/skeleton_datasets_36/workspace/deployment/action-net-36/<$data_name>_output",
+    "tensorboard_root": "/data/zqs/skeleton_datasets_36/workspace/deployment/action_tensor_board",
+    "protocol_root": "<$deploy_root>/protocols",
+    "log_root": "<$deploy_root>/logs",
+    "checkpoint_root": "<$deploy_root>/checkpoints",
+    "evaluate_root": "<$deploy_root>/evaluate_root"
+}
+
