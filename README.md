@@ -33,7 +33,7 @@ Action-Net provides A 3D geometric manifold representation method, termed motion
 2. Train Action-Net
 
 ```
-main.py
+main.py --code "***" --option "./options/args_option_defaults.json"
 ```
 
 ### Testing
