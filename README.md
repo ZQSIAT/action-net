@@ -1,3 +1,5 @@
+# pipeline
+<img width="1570" height="1004" src="/options/pipeline.png" />
 # Action-Net
 Pytorch implementation of "A 3D Geometric Manifold Representation Method: Towards Good Practices forSkeleton Action Recognition".
 
